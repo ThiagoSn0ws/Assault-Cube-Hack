@@ -14,7 +14,7 @@ Address GetModuleBaseAddress(const wchar_t* processName, const wchar_t* moduleNa
     HANDLE hSnap = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 
     if (hSnap != INVALID_HANDLE_VALUE) {
-        PROCESSENTRY32W procEntry; // Corrigido para a versão Wide 'W'
+        PROCESSENTRY32W procEntry;
         procEntry.dwSize = sizeof(procEntry);
         if (Process32FirstW(hSnap, &procEntry)) {
             do {
